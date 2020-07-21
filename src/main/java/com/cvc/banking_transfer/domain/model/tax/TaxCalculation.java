@@ -6,6 +6,10 @@ import com.cvc.banking_transfer.domain.model.Transfer;
 
 public interface TaxCalculation {
 	
-	public BigDecimal calculate (Transfer transfer);
+
+	BigDecimal calculate (Transfer transfer);
+	void setNext(TaxCalculation nextTax);
+	boolean isTaxRight(Transfer transfer);
+	BigDecimal calculateTax(Transfer transfer);
 
 }

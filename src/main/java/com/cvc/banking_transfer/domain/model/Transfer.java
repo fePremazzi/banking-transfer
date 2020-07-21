@@ -45,8 +45,12 @@ public class Transfer {
 	
 	
 	
-	
-	
+	public BigDecimal getTaxValue() {
+		return taxValue;
+	}
+	public void setTaxValue(BigDecimal taxValue) {
+		this.taxValue = taxValue;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -76,11 +80,7 @@ public class Transfer {
 	}
 	public void setTaxType(TaxType taxType) {
 		this.taxType = taxType;
-		this.taxValue = this.taxType.getRule().calculate(this);
 	}
-	public BigDecimal getTaxValue() {
-		return taxValue;
-	}	
 	public OffsetDateTime getOpeningDate() {
 		return openingDate;
 	}
