@@ -11,5 +11,6 @@ public interface TransferServiceInterface {
 	List<Transfer> findAll();
 	void delete (Long transferId);
 	Optional<Transfer> findByTransferId(Long transferId);
+	boolean existsById(Long transferId);
 
 }

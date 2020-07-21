@@ -46,4 +46,9 @@ public class TransferServiceImpl implements TransferServiceInterface {
 		return transferRepository.findById(transferId);
 	}
 
+	@Override
+	public boolean existsById(Long transferId) {
+		return transferRepository.existsById(transferId);
+	}
+
 }
