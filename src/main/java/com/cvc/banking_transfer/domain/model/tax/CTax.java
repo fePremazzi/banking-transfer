@@ -14,7 +14,9 @@ public class CTax extends AbstractTaxCalculation {
 
 	@Override
 	public boolean isTaxRight(Transfer transfer) {
-		long days = Duration.between(transfer.getOpeningDate(), transfer.getScheduledDate()).toDays();
+		long days = Duration.between(
+				transfer.getOpeningDate().atStartOfDay(), 
+				transfer.getScheduledDate().atStartOfDay()).toDays();
 		
 		return (days <= 40 || 
                 (days > 40 && transfer.getValue().compareTo(BigDecimal.valueOf(100000)) == 1));
@@ -24,7 +26,9 @@ public class CTax extends AbstractTaxCalculation {
 	public BigDecimal calculateTax(Transfer transfer) {
 		transfer.setTaxType(TaxType.C);
 		
-		long days = Duration.between(transfer.getOpeningDate(), transfer.getScheduledDate()).toDays();
+		long days = Duration.between(
+				transfer.getOpeningDate().atStartOfDay(), 
+				transfer.getScheduledDate().atStartOfDay()).toDays();
 		BigDecimal transferValue = transfer.getValue();
 
 		if (days > 10 && days <= 20) {

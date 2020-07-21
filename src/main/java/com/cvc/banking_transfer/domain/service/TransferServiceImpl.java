@@ -1,5 +1,6 @@
 package com.cvc.banking_transfer.domain.service;
 
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +24,7 @@ public class TransferServiceImpl implements TransferServiceInterface {
 	@Override
 	public Transfer save(Transfer transfer) {
 
-		transfer.setOpeningDate(OffsetDateTime.now());
+		transfer.setOpeningDate(LocalDate.now());
 		transfer.setTaxValue(taxCalculation.calculate(transfer));
 
 		return transferRepository.save(transfer);

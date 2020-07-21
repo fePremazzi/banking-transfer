@@ -13,7 +13,9 @@ public class BTax extends AbstractTaxCalculation{
 
 	@Override
 	public boolean isTaxRight(Transfer transfer) {
-		long days = Duration.between(transfer.getOpeningDate(), transfer.getScheduledDate()).toDays();
+		long days = Duration.between(
+				transfer.getOpeningDate().atStartOfDay(), 
+				transfer.getScheduledDate().atStartOfDay()).toDays();
 		return days <= 10;
 		
 	}
@@ -21,8 +23,10 @@ public class BTax extends AbstractTaxCalculation{
 	@Override
 	public BigDecimal calculateTax(Transfer transfer) {
 		transfer.setTaxType(TaxType.B);
-		long days = Duration.between(transfer.getOpeningDate(), transfer.getScheduledDate()).toDays();
-		return new BigDecimal(12).multiply(BigDecimal.valueOf(days));
+		long days = Duration.between(
+				transfer.getOpeningDate().atStartOfDay(), 
+				transfer.getScheduledDate().atStartOfDay()).toDays();
+		return BigDecimal.valueOf(12).multiply(BigDecimal.valueOf(days));
 	}
 
 

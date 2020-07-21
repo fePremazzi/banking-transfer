@@ -1,6 +1,7 @@
 package com.cvc.banking_transfer.domain.model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 
 import javax.persistence.Column;
@@ -38,10 +39,10 @@ public class Transfer {
 	private BigDecimal taxValue;
 	
 	@Column(nullable = false)
-	private OffsetDateTime openingDate;
+	private LocalDate openingDate;
 	
 	@Column(nullable = false)
-	private OffsetDateTime scheduledDate;
+	private LocalDate scheduledDate;
 	
 	
 	
@@ -81,16 +82,16 @@ public class Transfer {
 	public void setTaxType(TaxType taxType) {
 		this.taxType = taxType;
 	}
-	public OffsetDateTime getOpeningDate() {
+	public LocalDate getOpeningDate() {
 		return openingDate;
 	}
-	public void setOpeningDate(OffsetDateTime openingDate) {
+	public void setOpeningDate(LocalDate openingDate) {
 		this.openingDate = openingDate;
 	}
-	public OffsetDateTime getScheduledDate() {
+	public LocalDate getScheduledDate() {
 		return scheduledDate;
 	}
-	public void setScheduledDate(OffsetDateTime scheduledDate) {
+	public void setScheduledDate(LocalDate scheduledDate) {
 		this.scheduledDate = scheduledDate;
 	}
 	

@@ -16,14 +16,16 @@ public class ATax extends AbstractTaxCalculation{
 
 	@Override
 	public boolean isTaxRight(Transfer transfer) {
-		long days = Duration.between(transfer.getOpeningDate(), transfer.getScheduledDate()).toDays();
+		long days = Duration.between(
+				transfer.getOpeningDate().atStartOfDay(), 
+				transfer.getScheduledDate().atStartOfDay()).toDays();
 		return days == 0 ;
 	}
 
 	@Override
 	public BigDecimal calculateTax(Transfer transfer) {
 		transfer.setTaxType(TaxType.A);
-		return new BigDecimal(3).add(transfer.getValue().multiply(new BigDecimal(0.03)));
+		return BigDecimal.valueOf(3).add(transfer.getValue().multiply(BigDecimal.valueOf(0.03)));
 	}
 
 	
