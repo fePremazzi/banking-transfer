@@ -3,6 +3,7 @@ package com.cvc.banking_transfer.domain.model;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -20,15 +21,26 @@ public class Transfer {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(nullable = false, length = 6)
 	private String originAccount;
+	
+	@Column(nullable = false, length = 6)
 	private String destinationAccount;
+	
+	@Column(nullable = false)
 	private BigDecimal value;
 	
+	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
 	private TaxType taxType;
+	
+	@Column(nullable = false)
 	private BigDecimal taxValue;
 	
+	@Column(nullable = false)
 	private OffsetDateTime openingDate;
+	
+	@Column(nullable = false)
 	private OffsetDateTime scheduledDate;
 	
 	public Long getId() {
