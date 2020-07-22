@@ -5,7 +5,10 @@ import java.time.LocalDate;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -14,15 +17,19 @@ public class TransferInput {
 	
 	private long id;
     
+	@NotNull
     @Size(min = 6, max = 6)
     private String originAccount;
     
+	@NotNull
     @Size(min = 6, max = 6)
     private String destinationAccount;
     
+	@NotNull
     @DecimalMin(value = "0.01")
     private BigDecimal value;
     
+	@NotNull
     @FutureOrPresent
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
     private LocalDate scheduledDate;

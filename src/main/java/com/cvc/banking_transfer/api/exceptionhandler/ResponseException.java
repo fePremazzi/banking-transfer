@@ -1,12 +1,20 @@
 package com.cvc.banking_transfer.api.exceptionhandler;
 
 import java.time.OffsetDateTime;
+import java.util.List;
 
+
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+@JsonInclude(value = Include.NON_NULL)
 public class ResponseException {
 
 	private Integer status;
 	private OffsetDateTime dateTime;
 	private String description;
+	private List<Field> fields;
 
 	public Integer getStatus() {
 		return status;
@@ -31,5 +39,15 @@ public class ResponseException {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
+	public List<Field> getFields() {
+		return fields;
+	}
+
+	public void setFields(List<Field> fields) {
+		this.fields = fields;
+	}
+	
+	
 
 }
