@@ -46,6 +46,18 @@ public class Transfer {
 	
 	
 	
+	public Transfer(String originAccount, String destinationAccount, BigDecimal value, LocalDate openingDate,
+			LocalDate scheduledDate) {
+		super();
+		this.originAccount = originAccount;
+		this.destinationAccount = destinationAccount;
+		this.value = value;
+		this.openingDate = openingDate;
+		this.scheduledDate = scheduledDate;
+	}
+	public Transfer() {
+		super();
+	}
 	public BigDecimal getTaxValue() {
 		return taxValue;
 	}
