@@ -8,6 +8,12 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+/**
+ * Response class when an Exception is handled
+ * by the {@link ApiExceptionHandler.class}
+ * @author felli
+ *
+ */
 @JsonInclude(value = Include.NON_NULL)
 public class ResponseException {
 

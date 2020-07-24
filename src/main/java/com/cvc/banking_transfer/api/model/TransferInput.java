@@ -12,7 +12,11 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-
+/**
+ * Class to map the input from the View to a known object
+ * @author felli
+ *
+ */
 public class TransferInput {
 	
 	private long id;

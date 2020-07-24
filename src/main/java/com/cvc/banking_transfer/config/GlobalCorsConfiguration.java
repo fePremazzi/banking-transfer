@@ -5,6 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+/**
+ * Configuration to enable CORS globally in the application	
+ * @author felli
+ */
 @Configuration
 public class GlobalCorsConfiguration {
 

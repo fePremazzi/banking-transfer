@@ -5,6 +5,11 @@ import java.time.Duration;
 
 import com.cvc.banking_transfer.domain.model.Transfer;
 
+/**
+ * Class to verify if the Tax B is applicable and to calculate the tax value
+ * @author felli
+ *
+ */
 public class BTax extends AbstractTaxCalculation{
 
 	public BTax() {

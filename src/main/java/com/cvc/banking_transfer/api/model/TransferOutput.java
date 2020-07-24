@@ -6,6 +6,11 @@ import java.time.OffsetDateTime;
 
 import com.cvc.banking_transfer.domain.model.tax.TaxType;
 
+/**
+ * Output object to return to the view when a succesfull transation occurs.
+ * @author felli
+ *
+ */
 public class TransferOutput {
 
 	private Long id;

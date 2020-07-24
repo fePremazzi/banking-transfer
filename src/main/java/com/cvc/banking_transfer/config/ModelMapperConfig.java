@@ -4,6 +4,11 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Configuration Bean to enable Spring to manage this component
+ * @author felli
+ *
+ */
 @Configuration
 public class ModelMapperConfig {
 	

@@ -12,6 +12,11 @@ import com.cvc.banking_transfer.domain.model.Transfer;
 import com.cvc.banking_transfer.domain.model.tax.TaxCalculation;
 import com.cvc.banking_transfer.domain.repository.TransferRepository;
 
+/**
+ * Model layer responsible for the business logic of the application.
+ * @author felli
+ *
+ */
 @Service
 public class TransferServiceImpl implements TransferServiceInterface {
 

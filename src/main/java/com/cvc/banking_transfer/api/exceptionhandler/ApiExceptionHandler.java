@@ -20,6 +20,12 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.cvc.banking_transfer.domain.exception.DomainException;
 import com.cvc.banking_transfer.domain.exception.TaxNotFoundException;
 
+/**
+ * API Exception handler. All th exceptions due to invalid arguments from
+ * the View will be handle here.
+ * @author felli
+ *
+ */
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 	

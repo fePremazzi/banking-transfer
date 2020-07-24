@@ -7,6 +7,12 @@ import org.springframework.stereotype.Component;
 
 import com.cvc.banking_transfer.domain.model.Transfer;
 
+/**
+ * Class to verify if the Tax A is applicable and to calculate the tax value.
+ * A tax is the first element in the chain of responsability to resolve and calculate the tax value
+ * @author felli
+ *
+ */
 @Component
 public class ATax extends AbstractTaxCalculation{
 

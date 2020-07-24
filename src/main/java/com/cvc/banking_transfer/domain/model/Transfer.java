@@ -14,7 +14,11 @@ import javax.persistence.Id;
 
 import com.cvc.banking_transfer.domain.model.tax.TaxType;
 
-
+/**
+ * Model template to persist on the database.
+ * @author felli
+ *
+ */
 @Entity
 public class Transfer {
 	

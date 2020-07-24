@@ -6,6 +6,11 @@ import java.time.Duration;
 import com.cvc.banking_transfer.domain.exception.TaxNotFoundException;
 import com.cvc.banking_transfer.domain.model.Transfer;
 
+/**
+ * Class to verify if the Tax C is applicable and to calculate the tax value
+ * @author felli
+ *
+ */
 public class CTax extends AbstractTaxCalculation {
 	
 	public CTax() {

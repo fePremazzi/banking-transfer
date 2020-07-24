@@ -25,6 +25,11 @@ import com.cvc.banking_transfer.api.model.TransferOutput;
 import com.cvc.banking_transfer.domain.model.Transfer;
 import com.cvc.banking_transfer.domain.service.TransferServiceImpl;
 
+/**
+ * Controller layer of the application to schedule a transfer
+ * @author felli
+ *
+ */
 @RestController
 @RequestMapping("/schedules")
 public class TransferController {

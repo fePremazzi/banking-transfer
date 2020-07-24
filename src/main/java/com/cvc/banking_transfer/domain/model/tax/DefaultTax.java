@@ -5,6 +5,11 @@ import java.math.BigDecimal;
 import com.cvc.banking_transfer.domain.exception.TaxNotFoundException;
 import com.cvc.banking_transfer.domain.model.Transfer;
 
+/**
+ * Default tax if neither A,B and C tax are applicable, then this one is selected
+ * @author felli
+ *
+ */
 public class DefaultTax extends AbstractTaxCalculation{
 
 	@Override

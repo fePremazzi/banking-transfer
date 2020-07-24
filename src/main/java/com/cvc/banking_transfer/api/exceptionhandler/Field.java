@@ -1,5 +1,11 @@
 package com.cvc.banking_transfer.api.exceptionhandler;
 
+/**
+ * Class to show what kind of invalid field
+ * the view is sending to the backend
+ * @author felli
+ *
+ */
 public class Field {
 	
 	private String name;
