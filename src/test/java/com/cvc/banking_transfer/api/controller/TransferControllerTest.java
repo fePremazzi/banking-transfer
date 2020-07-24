@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -70,13 +71,14 @@ public class TransferControllerTest {
     
     @Test
     public void saveTest() throws Exception {
+    	LocalDate date = LocalDate.now();
         MockHttpServletRequestBuilder builder = post("/schedules")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\r\n" + 
                 		"	\"originAccount\":\"123456\",\r\n" + 
                 		"	\"destinationAccount\":\"456789\",\r\n" + 
                 		"	\"value\":10000,\r\n" + 
-                		"	\"scheduledDate\":\"2020-07-22\"\r\n" + 
+                		"	\"scheduledDate\":\""+ date.toString() + "\"\r\n" + 
                 		"}");
         mvc.perform(builder).andExpect(status().isCreated());
     }
