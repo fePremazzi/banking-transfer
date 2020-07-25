@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "637002d2-54f6-4c28-ad39-ba5eea30f058",
+		"name": "BankingScheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transfer - Criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"originAccount\":\"123456\",\n\t\"destinationAccount\":\"123789\",\n\t\"value\":50000,\n\t\"scheduledDate\":\"2020-08-26\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedules",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer - Atualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"originAccount\":\"987654\",\r\n\t\"destinationAccount\":\"987654\",\r\n\t\"value\":10000,\r\n\t\"scheduledDate\":\"2020-08-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedules/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer - Buscar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedules/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedules",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer - Buscar Todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedules/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedules",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer - Deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/schedules/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"schedules",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

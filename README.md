@@ -33,6 +33,8 @@ After installing docker you can deploy this application by using the following d
 docker run -d -p 8080:8080 fepremazzi/banking-transfer
 ```
 
+You can test by importing a Postman collection of requests on Postman provided in this repository named by ``BankingScheduler.postman_collection.json``.
+
 The command above only run a container with the backend application, if you looking for the Full application (backend and [frontend](https://github.com/fePremazzi/angular-banking-transfer)) you can simply run the docker-compose command below on the project root folder:
 
 ```
@@ -49,3 +51,4 @@ This command will download both images (backend and frontend) and initialize the
 * Navigate to the root folder of your project and run the ``mvn clean package`` command to build the application jar.
 * Navigate to your target folder and execute the jar by using the ``java -jar banking-transfer-0.0.1-SNAPSHOT.jar`` command.
 * Then it will be espose on 8080 por at ``http://localhost:8080``.
+* You can test by importing a Postman collection of requests on Postman provided in this repository named by ``BankingScheduler.postman_collection.json``.
