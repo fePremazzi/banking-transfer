@@ -15,7 +15,7 @@ The persistence layer was built to be in memory using [H2 database](https://www.
 
 * [Maven](https://maven.apache.org/) - Dependency and build management
 * [Java jdk 14](https://openjdk.java.net/projects/jdk/14/) - Programming language, can be download [here](https://www.oracle.com/java/technologies/javase/jdk14-archive-downloads.html).
-* [Springboot[(https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) - Main framework used
+* [Springboot](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/) - Main framework used
 * [Spring Data JPA](https://spring.io/projects/spring-data-jpa#overview) - used to persist data on the database.
 * [H2 database](https://www.h2database.com) - In memory database
 * [Modelmapepr](http://modelmapper.org/) - Responsible for mapping a model to another.
